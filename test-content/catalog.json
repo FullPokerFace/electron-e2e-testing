@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "contentVersion": "1.1.0",
+  "runnerApiVersion": 1,
+  "environments": [
+    { "id": "prod", "name": "Prod", "baseUrl": "https://resumefromspace.com" }
+  ],
+  "teams": [
+    {
+      "id": "resume-from-space",
+      "name": "Resume From Space",
+      "tests": [
+        { "id": "open-website", "name": "Open website", "file": "resume-from-space/open-website.js" },
+        { "id": "login", "name": "Test login", "file": "resume-from-space/login.js" }
+      ]
+    }
+  ]
+}

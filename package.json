@@ -1,0 +1,46 @@
+{
+  "name": "csp-checkpoint",
+  "version": "1.0.0",
+  "description": "Portable team-based Playwright test runner",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "electron .",
+    "record": "node scripts/record-test.js",
+    "browser:install": "node scripts/install-browser.js",
+    "dist": "npm run browser:install && electron-builder --win portable"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "playwright": "1.64.1"
+  },
+  "devDependencies": {
+    "electron": "44.9.2",
+    "electron-builder": "26.15.3"
+  },
+  "build": {
+    "appId": "com.cspcheckpoint.testrunner",
+    "productName": "Test Runner",
+    "files": [
+      "src/**/*",
+      "package.json"
+    ],
+    "extraResources": [
+      {
+        "from": "browsers",
+        "to": "browsers"
+      },
+      {
+        "from": "test-content",
+        "to": "test-content"
+      }
+    ],
+    "win": {
+      "target": "portable"
+    },
+    "portable": {
+      "artifactName": "TestRunner-Portable.exe"
+    }
+  }
+}

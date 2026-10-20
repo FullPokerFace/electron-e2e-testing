@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'none'">
+  <title>Test Runner</title>
+</head>
+<body>
+  <h1>Test Runner</h1>
+  <p><label for="team">Team</label> <select id="team" disabled></select></p>
+  <p><label for="environment">Environment</label> <select id="environment" disabled></select></p>
+  <p>Website: <output id="url"></output></p>
+  <h2>Tests to run</h2>
+  <ul id="tests"></ul>
+  <button id="run" disabled>Run All Tests</button>
+  <button id="reload">Reload Test Content</button>
+  <button id="report" disabled>Open Report</button>
+  <button id="screenshots" disabled>Open Screenshots Folder</button>
+  <p>Saved run folder: <output id="artifact-path">No run yet</output></p>
+  <p id="status" role="status" aria-live="polite">Loading test content...</p>
+  <p>After each test, use the bottom-left browser button to save a screenshot and continue. After the last test, save the screenshot and finish. Close the browser before starting another run.</p>
+  <pre id="errors"></pre>
+  <script src="renderer.js"></script>
+</body>
+</html>
